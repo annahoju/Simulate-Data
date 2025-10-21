@@ -10,10 +10,10 @@
 #then plot those  data 
 
 #Simulate predictor variable
-predictor <- rnorm(n=100)  #randomly sample from a normal distribution (default mean of 0, SD of 1)
+predictor <- rnorm(n=200)  #randomly sample from a normal distribution (default mean of 0, SD of 1)
 
 #Simulate response variable with noise 
-response <- 2 * predictor + rnorm(n=100, sd=0.2) #response that is twice the value of the predictor
+response <- 2 * predictor + rnorm(n=length(predictor), sd=0.2) #response that is twice the value of the predictor
 
 #Plot the data 
 plot(x=predictor, y=response)
